@@ -1,0 +1,136 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f7;
+    color: #333;
+    transition: 0.3s;
+}
+
+/* DARK MODE */
+body.dark {
+    background: #0c0f14;
+    color: #f1f1f1;
+}
+
+header {
+    background: #0a73ff;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* LEFT BOX */
+.left, .right {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+body.dark .left,
+body.dark .right {
+    background: #1a1c22;
+}
+
+/* DESKTOP LAYOUT */
+@media (min-width: 850px) {
+    .left { width: 35%; }
+    .right { width: 60%; }
+}
+
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid #0a73ff;
+    object-fit: cover;
+}
+
+.occupation {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* ICONS */
+.icons i {
+    font-size: 32px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icons i:hover {
+    color: #0a73ff;
+    transform: scale(1.2);
+}
+
+/* BUTTON */
+button {
+    background: #0a73ff;
+    border: none;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #005fd4;
+}
+
+/* ANIMATIONS */
+.fade-in {
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide-from-left {
+    animation: slideLeft 1s ease;
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(-60px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-from-right {
+    animation: slideRight 1s ease;
+}
+
+@keyframes slideRight {
+    from { transform: translateX(60px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
